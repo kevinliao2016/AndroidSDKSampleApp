@@ -11,6 +11,7 @@
     tools:context="com.driversiti.androidsdksampleapp.MainActivity">
 
 
+
     <Button
         android:text="Register User"
         android:layout_width="wrap_content"
@@ -18,4 +19,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="176dp"
         android:id="@+id/register_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fire Debug Event"
+        android:id="@+id/fire_debug_button"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/register_button"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Fire Debug Event">
+    <SwitchPreference
+        android:key="settings_developer_event_actions_key"
+        android:title="@string/settings_developer_header_sal_analyze_on_off_toggle"
+        android:summary="@string/settings_developer_header_sal_analyze_on_off_summary"
+        android:defaultValue="false" />
+    <Preference
+        android:key="settings_developer_event_actions_start_trip_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_start_trip_summary"
+        android:title="@string/settings_developer_event_action_start_trip_title" />
+    <Preference
+        android:key="settings_developer_event_actions_end_trip_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_stop_trip_summary"
+        android:title="@string/settings_developer_event_action_stop_trip_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_shutdown_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_shutdown_summary"
+        android:title="@string/settings_developer_event_action_shutdown_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_fire_hardbrake_trip_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_create_hardbrake_event_summary"
+        android:title="@string/settings_developer_event_action_create_hardbrake_event_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_fire_lanechange_trip_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_create_lanechange_event_summary"
+        android:title="@string/settings_developer_event_action_create_lanechange_event_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_fire_rapid_acceleration_trip_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_create_rapid_accel_event_summary"
+        android:title="@string/settings_developer_event_action_create_rapid_accel_event_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_fire_crash_detection_trip_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_create_crash_detection_event_summary"
+        android:title="@string/settings_developer_event_action_create_crash_detection_event_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_fire_speed_exceeded_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_create_speeding_event_summary"
+        android:title="@string/settings_developer_event_action_create_speeding_event_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_fire_speed_restored_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_create_speed_restored_event_title"
+        android:title="@string/settings_developer_event_action_create_speed_restored_event_title"/>
+    <Preference
+        android:key="settings_developer_event_actions_driver_handling_event_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_driver_handling_title"
+        android:title="@string/settings_developer_event_action_driver_handling_summary"/>
+    <Preference
+        android:key="settings_developer_event_actions_passenger_handling_event_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_passenger_handling_title"
+        android:title="@string/settings_developer_event_action_passenger_handling_summary"/>
+    <Preference
+        android:key="settings_developer_event_actions_generic_handling_event_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_generic_handling_title"
+        android:title="@string/settings_developer_event_action_generic_handling_summary"/>
+    <Preference
+        android:key="settings_developer_event_actions_missed_event_key"
+        android:dependency="settings_developer_event_actions_key"
+        android:summary="@string/settings_developer_event_action_missed_event_summary"
+        android:title="@string/settings_developer_event_action_missed_event_title"/>
+
+</PreferenceScreen>

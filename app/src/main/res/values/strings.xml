@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">AndroidSDKSampleApp</string>
+
+
+    <!-- Developer Settings -->
+    <string name="settings_developer_options_title">Developer Options</string>
+    <string name="settings_developer_header_bluetooth_title">Bluetooth</string>
+    <string name="settings_developer_header_event_actions_title">Event Actions</string>
+    <string name="settings_developer_header_mocksensor_title">Mock Sensor</string>
+    <string name="settings_developer_header_app_versions_title">App Versions</string>
+    <string name="settings_developer_header_bluetooth_on_off_toggle">Bluetooth On/Off</string>
+    <string name="settings_developer_header_sal_analyze_on_off_toggle">Toggle SAL Analyze</string>
+    <string name="settings_developer_header_sal_analyze_on_off_summary">Turn SAL Analyze On/Off</string>
+    <string name="settings_developer_header_bluetooth_on_off_summary">Turn bluetooth settings on</string>
+    <string name="settings_developer_header_bluetooth_pair_a_device">Pair a device</string>
+    <string name="settings_developer_header_bluetooth_choose_a_device_to_pair">Choose a device to pair</string>
+
+    <!-- Event Actions Settings -->
+    <string name="settings_developer_event_action_start_trip_title">Start Trip</string>
+    <string name="settings_developer_event_action_start_trip_summary">Create a new Trip</string>
+    <string name="settings_developer_event_action_stop_trip_title">End Trip</string>
+    <string name="settings_developer_event_action_stop_trip_summary">End the current Trip</string>
+
+    <string name="settings_developer_event_action_shutdown_title">Shutdown</string>
+    <string name="settings_developer_event_action_shutdown_summary">Shutdown SDK</string>
+
+
+    <string name="settings_developer_event_action_create_hardbrake_event_title">Hard Break</string>
+    <string name="settings_developer_event_action_create_lanechange_event_title">Lane Change</string>
+    <string name="settings_developer_event_action_create_hardbrake_event_summary">Fire a hard break event</string>
+    <string name="settings_developer_event_action_create_lanechange_event_summary">Fire a lane change event</string>
+    <string name="settings_developer_event_action_create_rapid_accel_event_title">Rapid Acceleration</string>
+    <string name="settings_developer_event_action_create_rapid_accel_event_summary">Fire a rapid acceleration event</string>
+    <string name="settings_developer_event_action_create_crash_detection_event_title">Crash Detection</string>
+    <string name="settings_developer_event_action_create_crash_detection_event_summary">Fire a crash detection event</string>
+    <string name="settings_developer_event_action_create_speeding_event_title">Speeding Detection</string>
+    <string name="settings_developer_event_action_create_speeding_event_summary">Fire a speeding event</string>
+    <string name="settings_developer_event_action_create_speed_restored_event_title">Safe Speed Detection</string>
+    <string name="settings_developer_event_action_create_speed_restored_event_summary">Fire a restored to safe speed event</string>
+    <string name="settings_developer_event_action_missed_event_title">Missed Event</string>
+    <string name="settings_developer_event_action_missed_event_summary">Missed Event Dialog</string>
+    <string name="settings_developer_event_action_driver_handling_title">Driver Handling Event</string>
+    <string name="settings_developer_event_action_driver_handling_summary">Driver handling event</string>
+    <string name="settings_developer_event_action_generic_handling_title">Generic Handling Event</string>
+    <string name="settings_developer_event_action_generic_handling_summary">Generic handling event</string>
+    <string name="settings_developer_event_action_passenger_handling_title">Passenger Handling Event</string>
+    <string name="settings_developer_event_action_passenger_handling_summary">Passenger handling event</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.driversiti.androidsdksampleapp;
 
 import android.Manifest;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -32,6 +34,7 @@ import com.driversiti.driversitisdk.driversiti.event.SpeedExceededEvent;
 import com.driversiti.driversitisdk.driversiti.event.SpeedRestoredEvent;
 import com.driversiti.driversitisdk.driversiti.event.TripEndEvent;
 import com.driversiti.driversitisdk.driversiti.event.TripStartEvent;
+import com.facebook.stetho.Stetho;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,12 +50,19 @@ public class MainActivity extends AppCompatActivity {
     DriversitiEventListener mListener;
     MainActivity mContext;
     Button mRegistrationButton;
+    Button mFireDebugButton;
     private static boolean mIsDriversitiSetup = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Stetho.initialize(Stetho.newInitializerBuilder(this)
+                                .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                                .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+                                .build());
+
         mContext = this;
         mRegistrationButton = (Button) findViewById(R.id.register_button);
         // in case of permission request is needed, delay configuration until necessary permissions are granted
@@ -68,11 +78,35 @@ public class MainActivity extends AppCompatActivity {
             setupRegistrationButton();
         }
 
+        mFireDebugButton = (Button) findViewById(R.id.fire_debug_button);
+        mFireDebugButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FireDebugFragment mFireDebugFragment = new FireDebugFragment();
+                FragmentTransaction mFragmentTransaction = getFragmentManager().beginTransaction();
+                mFragmentTransaction.replace(R.id.activity_main, mFireDebugFragment);
+                mFragmentTransaction.commit();
+                mRegistrationButton.setVisibility(View.INVISIBLE);
+                mFireDebugButton.setVisibility(View.INVISIBLE);
+            }
+        });
+
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        mRegistrationButton.setVisibility(View.VISIBLE);
+        mFireDebugButton.setVisibility(View.VISIBLE);
         if (mIsDriversitiSetup) {
             Log.i(LOG_TAG, "onResume Adding Listener");
             mDriversitiSDK.addEventListener(mListener);
